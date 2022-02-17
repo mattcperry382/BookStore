@@ -1,22 +1,39 @@
 ﻿@{
+    ViewData["Title"] = "Book List";
 }
 
 @model BooksViewModel
 
 <h1>Online Bookstore</h1>
-@foreach (Book b in Model.Books)
-{
-    <h3>Title: @b.Title</h3>
-    <ul>
-        <li>Author: @b.Author</li>
-        <li>Publisher: @b.Publisher</li>
-        <li>ISBN: @b.Isbn</li>
-        <li>Classification: @b.Classification</li>
-        <li>Category: @b.Category</li>
-        <li>Page Count: @b.PageCount</li>
-        <li>Price: $@b.Price</li>
-    </ul>
-    <br />
-}
 
-<div page-model="@Model.PageInfo" page-action="Index"></div>
+<table class="table table-responsive table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>ISBN</th>
+            <th>Classification</th>
+            <th>Category</th>
+            <th>Page Count</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Book b in Model.Books)
+        {
+            <tr>
+                <td>@b.Title</td>
+                <td>@b.Author</td>
+                <td>@b.Publisher</td>
+                <td>@b.Isbn</td>
+                <td>@b.Classification</td>
+                <td>@b.Category</td>
+                <td>@b.PageCount</td>
+                <td>$@b.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="pagination" page-model="@Model.PageInfo" page-action="Index"></div>

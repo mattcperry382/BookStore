@@ -18,7 +18,7 @@ namespace BookStore.Controllers
         }
         public IActionResult Index(int pageNum = 1)
         {
-            int pageSize = 5;
+            int pageSize = 10;
 
             var info = new BooksViewModel
             {
