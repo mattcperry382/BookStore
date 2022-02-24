@@ -17,23 +17,15 @@
             <th>Category</th>
             <th>Page Count</th>
             <th>Price</th>
+            <th>Add to Cart</th>
         </tr>
     </thead>
     <tbody>
         @foreach (Book b in Model.Books)
         {
-            <tr>
-                <td>@b.Title</td>
-                <td>@b.Author</td>
-                <td>@b.Publisher</td>
-                <td>@b.Isbn</td>
-                <td>@b.Classification</td>
-                <td>@b.Category</td>
-                <td>@b.PageCount</td>
-                <td>$@b.Price</td>
-            </tr>
+            <partial name="BookSummary" model="b"/>
         }
     </tbody>
 </table>
 
-<div class="pagination" page-model="@Model.PageInfo" page-action="Index"></div>
+<div page-model="@Model.PageInfo" page-action="Index" page-class="btn" page-class-normal="btn-outline-dark" page-classes-enabled="true" page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
