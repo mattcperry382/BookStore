@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     <link href="~/lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
     <header class="bg-dark text-white p-2">
         <h1 class="navbar-brand m-lg-2">Matt Perry's Online Bookstore</h1>
-        <p>Full of Professor Hilton's favorite movies</p>
+        <p>Full of Professor Hilton's favorite books</p>
+        <div>
+            <vc:cart-summary />
+        </div>
     </header>
     <div class="container">
         <div class="row m-1 p-1">
@@ -22,5 +26,6 @@
         </footer>
     </div>
     <script src="~/lib/js/bootstrap.min.js"></script>
+    <script src="~/lib/font-awesome/js/all.min.js"></script>
 </body>
 </html>

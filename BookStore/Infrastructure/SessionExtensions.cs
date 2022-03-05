@@ -9,7 +9,7 @@ namespace BookStore.Infrastructure
 {
     public static class SessionExtensions
     {
-        public static void setJson (this ISession session, string key, object value)
+        public static void SetJson (this ISession session, string key, object value)
         {
             session.SetString(key, JsonSerializer.Serialize(value));
         }
