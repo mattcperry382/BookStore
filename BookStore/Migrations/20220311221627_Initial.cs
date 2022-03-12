@@ -19,7 +19,8 @@ namespace BookStore.Migrations
                     City = table.Column<string>(nullable: false),
                     State = table.Column<string>(nullable: false),
                     Zip = table.Column<string>(nullable: false),
-                    Country = table.Column<string>(nullable: false)
+                    Country = table.Column<string>(nullable: false),
+                    OrderShipped = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,6 +69,9 @@ namespace BookStore.Migrations
         {
             migrationBuilder.DropTable(
                 name: "BasketLineItem");
+
+            migrationBuilder.DropTable(
+                name: "Books");
 
             migrationBuilder.DropTable(
                 name: "Orders");
