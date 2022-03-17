@@ -2,11 +2,14 @@
 }
 
 @model Book
+
+@*BOOTSTRAP ADDITION #2
+Font weight light and bold added to title and isbn*@
 <tr class="hover-shadow">
-    <td>@Model.Title</td>
+    <td class="font-weight-bold">@Model.Title</td>
     <td>@Model.Author</td>
     <td>@Model.Publisher</td>
-    <td>@Model.Isbn</td>
+    <td class="font-weight-light">@Model.Isbn</td>
     <td>@Model.Classification</td>
     <td>@Model.Category</td>
     <td>@Model.PageCount</td>
