@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BookStore.Migrations.AppIdentityDB
+namespace BookStore.Migrations
 {
     public partial class IdentitySetup : Migration
     {

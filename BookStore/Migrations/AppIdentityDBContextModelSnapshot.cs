@@ -3,16 +3,14 @@ using System;
 using BookStore.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace BookStore.Migrations.AppIdentityDB
+namespace BookStore.Migrations
 {
     [DbContext(typeof(AppIdentityDBContext))]
-    [Migration("20220317031237_IdentitySetup")]
-    partial class IdentitySetup
+    partial class AppIdentityDBContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
